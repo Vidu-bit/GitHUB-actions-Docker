@@ -6,13 +6,12 @@ const port = 3000;
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+    res.json('Hello World!');
 });
 
 app.get('/health', (req, res) => {
-    res.status(200).send('OK');
-    }
-);
+    res.json('OK');
+});
 
 const server = app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
